@@ -1,0 +1,59 @@
+// Default theme
+@import '@splidejs/splide/css';
+
+$slider-padding-right: 26vw;
+$slider-padding-left: 20.3vw;
+
+.splide__track {
+  padding-right: $slider-padding-right !important;
+  padding-left: $slider-padding-left !important;
+}
+
+.splide__slide {
+  transition: all 0.3s ease-in-out;
+}
+
+.splide__slide img {
+  // width: 100%;
+  height: 55rem;
+  // height: 100%;
+}
+
+.splide__arrows {
+  position: relative;
+}
+
+.splide__arrow:disabled {
+  visibility: hidden;
+}
+
+.splide__arrow {
+  background-image: url('../assets/img/main-slider-arrow-right.svg');
+  width: 14rem;
+  background-color: #00000000;
+  background-repeat: no-repeat;
+  top: 51rem;
+  right: 17.2%;
+  &--prev {
+    transform: scale(-1);
+  }
+}
+
+.splide__slide {
+  &.is-next, &.is-prev {
+    background: #F9F9F9;
+  }
+  display: flex;
+}
+
+.splide__pagination {
+  bottom: 11.5rem;
+  left: 76rem;
+  &__page {
+    margin-right: 1.5rem;
+    background: $color-slider-pagination;
+    &.is-active {
+      background: $color-slider-pagination-active;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.button__wrapper {
+  display: grid;
+  grid-template-columns: min-content;
+}
+
+.button {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: $color-btn-bg;
+  border-radius: 50%;
+  color: $color-btn-text;
+  @include font(1.8rem, 188%, 700);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.button-title {
+  color: $color-btn-title;
+  @include font(1.6rem, 188%, 400);
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: start;
+  margin-left: 1rem;
+}

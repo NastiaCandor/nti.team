@@ -1,0 +1,58 @@
+.main {
+  background: $color-section-bg-dark;
+}
+
+.main__wrapper {
+  position: relative;
+  margin: 0;
+  max-width: 100%;
+  // margin: 0 0 0 14%;
+}
+
+.main__scroll {
+  position: absolute;
+  @include font(1.6rem, 160%, 300);
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  bottom: 11rem;
+  left: 13.5vw;
+  background-image: url('../assets/img/main-scroll.svg');
+  background-repeat: no-repeat;
+  padding: 5rem 0 0 0;
+}
+
+// CONTENT
+
+.content {
+  background-image: url('../assets/img/Dell-main.svg');
+  background-repeat: no-repeat;
+  background-position: 23% 22%;
+  position: relative;
+}
+
+.content{
+  &__info-subtitle {
+    @include font(1.8rem, 134%, 300);
+    color: $color-main-subtitle;
+  }
+  &__info-title {
+    @include font(5rem, normal, 400);
+    color: $color-main-title;
+  }
+}
+
+.splide__slide.is-active {
+  .content__info {
+    width: 39%;
+    padding-top: 25rem;
+    &-subtitle {
+      margin-bottom: 2rem;
+    }
+    &-title {
+      margin-bottom: 5.7rem;
+    }
+  }
+  .content__photo {
+    padding-top: 8rem;
+  }
+}
