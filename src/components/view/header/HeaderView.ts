@@ -12,7 +12,6 @@ export default class HeaderView extends View {
   }
 
   protected configure(): void {
-    console.log('header');
     const wrapper = new ElementCreator(headerParams.wrapper);
     this.injectLogo(wrapper);
     this.injectNavigation(wrapper);
@@ -23,6 +22,7 @@ export default class HeaderView extends View {
 
   private injectLogo(wrapper: ElementCreator): void {
     const logo = new ElementCreator(headerParams.logo);
+    logo.setAttribute('href', '#main');
     wrapper.addInnerElement(logo);
   }
 

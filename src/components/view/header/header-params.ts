@@ -76,7 +76,7 @@ const NAVIGATION_LINKS = [
     link: '#news',
   },
   {
-    title: 'Наш АЦС',
+    title: 'Наш АСЦ',
     link: '#ourASC',
   },
   {

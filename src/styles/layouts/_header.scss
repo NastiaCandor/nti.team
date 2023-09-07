@@ -1,0 +1,112 @@
+.header__wrapper {
+  display: flex;
+  width: 100%;
+  padding: 2.7rem 0;
+}
+
+.header__logo {
+  width: 7rem;
+  height: 7rem;
+  background-image: url('../assets/img/Dell_Logo.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// NAVIGATION
+
+.header__navigation {
+  margin: 0 0 0 6rem;
+  padding: 2.5rem 0;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation__item {
+  margin-right: 4.5rem;
+  &:last-child {
+    margin-right: 0
+  }
+}
+
+.navigation__link {
+  @include font(1.5rem, normal);
+  text-transform: uppercase;
+}
+
+// SEARCH
+
+.search__block {
+  display: flex;
+  justify-content: center;
+  margin: auto 5rem;
+}
+
+.search__icon {
+  background-image: url('../assets/img/search-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+// USERS ICONS
+
+.user__block {
+  display: flex;
+  width: inherit;
+  max-width: 61.8rem;
+  justify-content: end;
+}
+
+.user__icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: $color-header-user-icons-bg;
+  margin: auto 0;
+  margin-left: 2.85rem;
+  &:first-child {
+    margin-left: 0;
+  }
+  &_profile {
+    background-image: url('../assets/img/profile-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+  }
+  &_connection {
+    background-image: url('../assets/img/connection-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+  }
+  &_favorite {
+    background-image: url('../assets/img/favorite-icon.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+  }
+  &_shopping-bag {
+    background-image: url('../assets/img/clarity_shopping-bag-line.svg');
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: 50% 50%;
+    position: relative;
+  }
+}
+
+.user__notification {
+  background-color: $color-header-notification-bg;
+  border-radius: 50%;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  @include font(1.2rem, 1.7rem, 700);
+  text-align: center;
+  color: $color-header-notification-text;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
