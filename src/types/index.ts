@@ -20,6 +20,13 @@ export type CatalogItemType = {
   imgAlt: string;
 };
 
+export type BenefitItemType = {
+  iconSRC: string;
+  iconAlt: string;
+  title: string;
+  subtitle: string;
+};
+
 // UTILES ITEMS
 
 export const btnContainer = {

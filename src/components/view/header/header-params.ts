@@ -77,7 +77,7 @@ const NAVIGATION_LINKS = [
   },
   {
     title: 'Наш АСЦ',
-    link: '#ourASC',
+    link: '#benefits',
   },
   {
     title: 'Контакты',

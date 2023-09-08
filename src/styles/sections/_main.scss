@@ -33,11 +33,11 @@
 .content{
   &__info-subtitle {
     @include font(1.8rem, 134%, 300);
-    color: $color-main-subtitle;
+    color: $color-section-subtitle;
   }
   &__info-title {
     @include font(5rem, normal, 400);
-    color: $color-main-title;
+    color: $color-section-title;
   }
 }
 
