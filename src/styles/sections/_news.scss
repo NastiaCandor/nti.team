@@ -1,0 +1,118 @@
+.news {
+  background: $color-section-bg-light;
+}
+
+.news__wrapper {
+  padding: 17rem 0;
+}
+
+.news__preview {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6.5rem;
+}
+
+.news__info {
+  margin-top: 1rem;
+  &__title {
+    @include font(5rem, 100%, 400);
+    color: $color-section-title;
+    margin-bottom: 3rem;
+  }
+  &__subtitle {
+    @include font(1.8rem, 150%, 300);
+    color: $color-section-subtitle;
+    width: 80%;
+  }
+}
+
+.news__info__btn {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 1rem;
+  .button-title {
+    margin: 1.5rem 2rem 0 0;
+    align-self: auto;
+  }
+}
+
+// CARDS
+
+.news__cards {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-row-gap: 4rem;
+  grid-column-gap: 4.2rem;
+}
+
+.news__cards__item {
+  position: relative;
+  width: 41.7rem;
+  height: 36.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 4.5rem 0 4.5rem 0;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../assets/img/news_item_footer-white.svg');
+    background-repeat: no-repeat;
+    background-size: 100.5%;
+    height: 100%;
+    width: 100%;
+    top: 60%;
+    z-index: 1;
+  }
+}
+
+.news__cards{
+  &__details {
+    margin: 2.5rem 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    @include font(2.5rem, 130%, 700);
+    color: $color-section-title;
+    margin-bottom: 1rem;
+    width: 60%;
+  }
+  &__subtitle {
+    @include font(1.4rem, 150%, 400);
+    color: $color-section-title;
+  }
+}
+
+.news__cards__date {
+  position: absolute;
+  right: 0;
+  top: 6.3rem;
+  right: -2rem;
+  background: $color-news-item-date-bg;
+  border-radius: 1.7rem;
+  padding: 3rem 1.2rem;
+  text-align: center;
+  color: $color-news-item-date-text;
+  box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.06);
+  &-day {
+    @include font(2rem, normal, 900);
+    margin-bottom: 0.7rem;
+  }
+  &-month {
+    @include font(1rem, normal, 300);
+  }
+}
+
+.news__cards__btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $color-news-item-btn-bg;
+  border: solid $color-news-item-btn-border 1rem;
+  z-index: 2;
+  font-size: 1.3rem;
+  bottom: 7.1rem;
+  right: 3rem;
+  scale: 1.2;
+}

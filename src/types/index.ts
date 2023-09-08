@@ -27,12 +27,20 @@ export type BenefitItemType = {
   subtitle: string;
 };
 
+export type NewsItemType = {
+  title: string;
+  subtitle: string;
+  dateDay: string;
+  dateMonth: string;
+  bgSRC: string;
+};
+
 // UTILES ITEMS
 
 export const btnContainer = {
   btnBlock: {
     tag: 'div',
-    cssClasses: ['content__info-more', 'button__wrapper'],
+    cssClasses: ['button__wrapper'],
   },
   btn: {
     tag: 'button',

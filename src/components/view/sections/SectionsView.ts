@@ -3,6 +3,7 @@ import View from '../View';
 import BenefitsView from './benefits/BenefitsView';
 import CatalogView from './catalog/CatalogView';
 import MainView from './main/MainView';
+import NewsView from './news/NewsView';
 import sectionsParams from './sections-params';
 
 export default class SectionsView extends View {
@@ -12,11 +13,14 @@ export default class SectionsView extends View {
 
   private benefits: BenefitsView;
 
+  private news: NewsView;
+
   constructor() {
     super(sectionsParams.main);
     this.main = new MainView();
     this.catalog = new CatalogView();
     this.benefits = new BenefitsView();
+    this.news = new NewsView();
   }
 
   public render(): void {
@@ -27,5 +31,6 @@ export default class SectionsView extends View {
     this.element.append(this.main.getElement());
     this.element.append(this.catalog.getElement());
     this.element.append(this.benefits.getElement());
+    this.element.append(this.news.getElement());
   }
 }
