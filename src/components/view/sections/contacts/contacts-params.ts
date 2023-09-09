@@ -33,7 +33,7 @@ const contactsParams = {
         cssClasses: ['contacts__our__info-container'],
       },
       item: {
-        tag: 'div',
+        tag: 'a',
         cssClasses: ['contacts__our__info-item'],
       },
       icon: {

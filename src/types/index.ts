@@ -35,6 +35,11 @@ export type NewsItemType = {
   bgSRC: string;
 };
 
+export type FooterMenuItemType = {
+  title: string;
+  link: string;
+};
+
 // UTILES ITEMS
 
 export const btnContainer = {
@@ -59,14 +64,17 @@ export const OUR_CONTACTS = {
   address: {
     title: 'Адрес',
     contact: 'Москва, ул. 3-я Хорошевская, дом 2, строение 1',
+    link: 'https://clck.ru/35eCjd',
   },
   tel: {
     title: 'Телефон',
     contact: ['+7 495 737-06-01', '+7 495 994-46-01'],
+    link: 'tel:+74957370601',
   },
   email: {
     title: 'E-mail',
     contact: 'dell_ru@gmail.com',
+    link: 'mailto:dell_ru@gmail.com',
   },
   social: [
     {

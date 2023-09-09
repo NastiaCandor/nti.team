@@ -30,9 +30,14 @@ export default class ContactsView extends View {
     container.addInnerElement([title, subtitle]);
 
     const info = new ElementCreator(contactsParams.our.info.container);
-    info.addInnerElement(this.getInfoContact(OUR_CONTACTS.address.title, OUR_CONTACTS.address.contact, ['_address']));
-    info.addInnerElement(this.getInfoContact(OUR_CONTACTS.email.title, OUR_CONTACTS.email.contact, ['_email']));
+    const address = this.getInfoContact(OUR_CONTACTS.address.title, OUR_CONTACTS.address.contact, ['_address']);
+    address.setAttribute('href', OUR_CONTACTS.address.link);
+    info.addInnerElement(address);
+    const email = this.getInfoContact(OUR_CONTACTS.email.title, OUR_CONTACTS.email.contact, ['_email']);
+    email.setAttribute('href', OUR_CONTACTS.email.link);
+    info.addInnerElement(email);
     const phones = this.getInfoContact(OUR_CONTACTS.tel.title, `${OUR_CONTACTS.tel.contact.join(' ')}`, ['_phone']);
+    phones.setAttribute('href', OUR_CONTACTS.tel.link);
     info.addInnerElement(phones);
     container.addInnerElement(info);
 
