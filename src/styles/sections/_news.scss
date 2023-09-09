@@ -3,7 +3,7 @@
 }
 
 .news__wrapper {
-  padding: 17rem 0;
+  padding: 17rem 0 17.8rem 0;
 }
 
 .news__preview {
@@ -52,13 +52,14 @@
   display: flex;
   flex-direction: column-reverse;
   border-radius: 4.5rem 0 4.5rem 0;
+  filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.05));
   &::after {
     content: '';
     display: block;
     position: absolute;
     background-image: url('../assets/img/news_item_footer-white.svg');
     background-repeat: no-repeat;
-    background-size: 100.5%;
+    background-size: 101%;
     height: 100%;
     width: 100%;
     top: 60%;

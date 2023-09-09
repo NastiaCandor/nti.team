@@ -1,0 +1,26 @@
+.form__input {
+  padding: 1.5rem;
+  @include font(2.2rem, 150%, 400);
+  border-radius: 1.5rem;
+  width: 100%;
+  background: none;
+  border: solid 1.5px $color-contacts-request-input-border;
+  color: $color-contacts-request-text;
+  &_comment {
+    height: 14.8rem;
+  }
+  &:active, &:focus, &:focus-visible {
+    border-color: $color-btn-bg;
+    outline: none;
+  }
+}
+
+.form__label {
+  position: absolute;
+  background: $color-contacts-request-bg;
+  padding: 0 1rem;
+  left: 2rem;
+  top: -1rem;
+  color: $color-contacts-request-label-text;
+  @include font(1.8rem, 134%, 300);
+}

@@ -52,3 +52,32 @@ export const btnContainer = {
     cssClasses: ['button-title'],
   },
 };
+
+// CONSTANTS
+
+export const OUR_CONTACTS = {
+  address: {
+    title: 'Адрес',
+    contact: 'Москва, ул. 3-я Хорошевская, дом 2, строение 1',
+  },
+  tel: {
+    title: 'Телефон',
+    contact: ['+7 495 737-06-01', '+7 495 994-46-01'],
+  },
+  email: {
+    title: 'E-mail',
+    contact: 'dell_ru@gmail.com',
+  },
+  social: [
+    {
+      link: 'https://www.facebook.com/Dell.CIS/?locale=ru_RU',
+      iconSRC: '../assets/img/contacts_facebook.svg',
+      iconALT: 'Facebook icon',
+    },
+    {
+      link: 'https://www.whatsapp.com/coronavirus/get-started?lang=ru_RU',
+      iconSRC: '../assets/img/contacts_whatsup.svg',
+      iconALT: 'WhatsApp icon',
+    },
+  ],
+};
