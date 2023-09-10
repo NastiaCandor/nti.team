@@ -4,9 +4,14 @@
 $slider-padding-right: 26vw;
 $slider-padding-left: 20.3vw;
 
+.splide {
+  height: $height-main-splide;
+}
+
 .splide__track {
   padding-right: $slider-padding-right !important;
   padding-left: $slider-padding-left !important;
+  height: 100%;
 }
 
 .splide__slide {
@@ -14,9 +19,8 @@ $slider-padding-left: 20.3vw;
 }
 
 .splide__slide img {
-  // width: 100%;
   height: 55rem;
-  // height: 100%;
+  position: absolute;
 }
 
 .splide__arrows {
@@ -47,10 +51,10 @@ $slider-padding-left: 20.3vw;
 }
 
 .splide__pagination {
-  bottom: 11.5rem;
-  left: 76rem;
+  bottom: 17.2rem;
+  left: 74rem;
   &__page {
-    margin-right: 1.5rem;
+    margin-right: 1.0rem;
     background: $color-slider-pagination;
     &.is-active {
       background: $color-slider-pagination-active;

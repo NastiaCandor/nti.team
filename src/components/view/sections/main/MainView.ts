@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Splide from '@splidejs/splide';
 import ElementCreator from '../../../utils/ElementCreator';
 import View from '../../View';
@@ -66,10 +65,10 @@ export default class MainView extends View {
     slider.addInnerElement(track);
 
     const splide = new Splide(slider.getElement(), {
-      // type: 'loop',
       padding: '5rem',
       arrowPath: 'M94 1L104.5 11.5M104.5 11.5L94 22M104.5 11.5H0',
     });
+
     splide.mount();
 
     wrapper.addInnerElement(slider);
