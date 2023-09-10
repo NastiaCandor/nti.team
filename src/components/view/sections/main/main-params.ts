@@ -58,8 +58,6 @@ const mainParams = {
   },
 };
 
-// const IMAGES_SRC = ['../../../../assets/img/main-slider.png'];
-
 const SLIDER_CONTENT = [
   {
     subtitle: 'Новое поступление',

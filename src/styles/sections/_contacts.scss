@@ -1,7 +1,6 @@
 .contacts {
   background: $color-section-bg-light;
   position: relative;
-  // z-index: -2;
   &::after {
     content: '';
     position: absolute;

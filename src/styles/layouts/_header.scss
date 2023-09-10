@@ -1,3 +1,8 @@
+.header {
+  background: $color-header-bg;
+  position: relative;
+}
+
 .header__wrapper {
   display: flex;
   width: 100%;
@@ -33,6 +38,11 @@
 .navigation__link {
   @include font(1.5rem, normal);
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  color: $color-header-navigation-item;
+  &:hover {
+    color: $color-header-navigation-item-hover;
+  }
 }
 
 // SEARCH

@@ -62,6 +62,66 @@ const headerParams = {
   },
 };
 
+const dropMenu = {
+  wrapper: {
+    tag: 'div',
+    cssClasses: ['drop-menu__wrapper'],
+  },
+  container: {
+    tag: 'div',
+    cssClasses: ['drop-menu'],
+  },
+  personal: {
+    container: {
+      tag: 'div',
+      cssClasses: ['drop-menu__personal'],
+    },
+    userIcon: {
+      tag: 'div',
+      cssClasses: ['user__icon', 'drop-menu__personal__icon'],
+    },
+    userName: {
+      tag: 'p',
+      cssClasses: ['drop-menu__personal__name'],
+    },
+  },
+  menu: {
+    list: {
+      tag: 'ul',
+      cssClasses: ['drop-menu__menu__list'],
+    },
+    item: {
+      tag: 'li',
+      cssClasses: ['drop-menu__personal__item'],
+    },
+    link: {
+      tag: 'a',
+      cssClasses: ['drop-menu__personal__link'],
+    },
+  },
+};
+
+const USER_MENU_LIST = [
+  {
+    link: '#account',
+    title: 'Личный кабинет',
+  },
+  {
+    link: '#order-history',
+    title: 'История заказов',
+  },
+  {
+    link: '#personal-offers',
+    title: 'Персональные предложения',
+  },
+  {
+    link: '#log-out',
+    title: 'Выйти',
+  },
+];
+
+const USER_NAME = 'Мария';
+
 const NAVIGATION_LINKS = [
   {
     title: 'Главная',
@@ -87,4 +147,4 @@ const NAVIGATION_LINKS = [
 
 const USER_ICONS_TYPES = ['profile', 'connection', 'favorite', 'shopping-bag'];
 
-export { headerParams, NAVIGATION_LINKS, USER_ICONS_TYPES };
+export { headerParams, NAVIGATION_LINKS, USER_ICONS_TYPES, dropMenu, USER_MENU_LIST, USER_NAME };

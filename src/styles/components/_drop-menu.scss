@@ -1,0 +1,69 @@
+.drop-menu__wrapper {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  padding-top: 8.5rem;
+  left: -17.8rem;
+}
+
+.drop-menu {
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0px 1.7530173063278198px 9.39116382598877px rgba(0, 0, 0, 0.06)) drop-shadow(0px 14px 75px rgba(0, 0, 0, 0.13));
+  background: $color-header-bg;
+  // overflow: hidden;
+  border-radius: 2rem;
+  padding: 3rem 0 0 0;
+  z-index: 50;
+  @include font(2rem, 150%, 400);
+  width: 40.5rem;
+  &::after {
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background: $color-header-bg;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -0.9rem;
+    left: 50%;
+  }
+}
+
+.drop-menu__personal {
+  display: flex;
+  margin-bottom: 3.3rem;
+  padding-left: 3rem;
+}
+
+.drop-menu__personal__icon {
+  background-image: url(http://localhost:8080/assets/img/profile-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+}
+
+.drop-menu__personal__name {
+  line-height: 250%;
+  padding-left: 2rem;
+}
+
+.drop-menu__personal__item {
+  padding: 1.9rem 0 1.9rem 3rem;
+  border-top: solid 1px $color-section-bg-dark;
+  border-bottom: solid 1px $color-section-bg-dark;
+  &:nth-child(2n) {
+    border: none;
+  }
+  &:hover {
+    background: $color-section-bg-dark;
+    &:nth-child(4) {
+      border-radius: 0 0 2rem 2rem;
+    }
+  }
+}
+
+.user__icon_profile:hover {
+  position: relative;
+  .drop-menu__wrapper {
+    display: block;
+  }
+}
