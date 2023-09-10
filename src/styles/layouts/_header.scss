@@ -120,3 +120,94 @@
   top: 0;
   right: 0;
 }
+
+// MEDIA
+
+@include media-tablet {
+  .header__wrapper {
+    * {
+      z-index: 30;
+    }
+  }
+  .user__icon_connection, .user__icon_favorite {
+    display: none;
+  }
+  .header__wrapper {
+    padding: 1rem 1.2rem;
+    justify-content: space-between;
+  }
+  .header__logo {
+    width: 6rem;
+  }
+  .search__block {
+    margin: auto 0;
+    margin-left: 6rem;
+  }
+  .user__block {
+    width: auto;
+    margin-left: 3rem;
+  }
+  .user__icon {
+    margin-left: 0;
+    &:nth-child(4) {
+      margin-left: 1rem;
+    }
+    &:nth-child(5) {
+      display: flex;
+    }
+  }
+}
+
+// HAMBURGER MENU
+
+@include media-tablet {
+  .header__navigation {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 48rem;
+    transform: translate(0, -100%);
+    z-index: 20;
+    background: $color-header-bg;
+    transition: all 0.9s ease 0s;
+    padding: 0 0 0 3.3rem;
+    &._active {
+        transform: translate(0px, 0px);
+    }
+    .navigation__item {
+        margin: 4.3rem 0 0 0 ;
+        padding: 0;
+        width: fit-content;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10.5rem;
+    }
+    .navigation__link {
+        font-size: 1.5rem;
+    }
+  }
+}
+
+.menu__bg {
+  @include media-tablet {
+    position: fixed;
+    transition: 0.3s all ease-in-out 0.3s;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100vw;
+    height: 1000vw;
+    pointer-events: none;
+    z-index: 10;
+    &._active {
+        pointer-events: all;
+        opacity: 1;
+        background: rgba(63, 63, 63, 0.50);
+        transition: 0.3s all ease-in-out 0.3s;
+    }
+  }
+}

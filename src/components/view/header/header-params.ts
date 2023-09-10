@@ -54,11 +54,11 @@ const headerParams = {
   },
   hamburger: {
     tag: 'span',
-    cssClasses: ['hambirger'],
+    cssClasses: ['hamburger'],
   },
   hamburgerLine: {
     tag: 'span',
-    cssClasses: ['hambirger__line'],
+    cssClasses: ['hamburger__line'],
   },
 };
 

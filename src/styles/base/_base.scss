@@ -6,6 +6,9 @@ html {
 body {
   font-size: 1.6rem;
   @extend %font-add-Roboto;
+  &._lock{
+    overflow: hidden;
+  }
 }
 
 * {
