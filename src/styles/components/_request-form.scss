@@ -8,10 +8,17 @@
   color: $color-contacts-request-text;
   &_comment {
     height: 14.8rem;
+    @include media-tablet {
+      height: 8.3rem;
+    }
   }
   &:active, &:focus, &:focus-visible {
     border-color: $color-btn-bg;
     outline: none;
+  }
+  @include media-tablet {
+    @include font(1.5rem, 134%, 300);
+    padding: 1rem;
   }
 }
 
@@ -23,4 +30,7 @@
   top: -1rem;
   color: $color-contacts-request-label-text;
   @include font(1.8rem, 134%, 300);
+  @include media-tablet {
+    @include font(1.5rem, 134%, 300);
+  }
 }

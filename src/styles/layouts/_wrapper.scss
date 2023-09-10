@@ -1,4 +1,7 @@
 .wrapper {
   margin: 0 auto;
   max-width: 140rem;
+  @include media-tablet {
+    padding: 0 1.5rem;
+  }
 }

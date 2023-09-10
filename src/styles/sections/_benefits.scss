@@ -3,14 +3,25 @@
   background-image: url('../assets/img/benefits_bg-text.svg');;
   background-repeat: no-repeat;
   background-position: 1% 22%;
+  @include media-tablet {
+    background-size: 90% 90%;
+    background-position: 1rem -26rem;
+  }
 }
 
 .benefits__wrapper {
   padding: 18.5rem 0 5rem 0;
+  @include media-tablet {
+    padding: 10rem 1.5rem 12.8rem 1.5rem;
+  }
 }
 
 .benefits__info {
   display: flex;
+  @include media-tablet {
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
 }
 
 .benefits__img-container {
@@ -22,6 +33,11 @@
   position: absolute;
   top: -9rem;
   right: -7.5rem;
+  @include media-tablet {
+    width: 113%;
+    top: -23.5rem;
+    right: -10rem;
+  }
 }
 
 .benefits__preview {
@@ -30,12 +46,21 @@
     @include font(5rem, 100%, 400);
     color: $color-section-title;
     margin-bottom: 4rem;
+    @include media-tablet {
+      @include font(3rem, 5rem, 400);
+      margin-bottom: 2rem;
+    }
   }
   &__subtitle {
     @include font(1.8rem, 150%, 400);
     color: $color-section-subtitle;
     width: 70%;
     margin-bottom: 4rem;
+    @include media-tablet {
+      @include font(1.5rem, 150%, 400);
+      width: 85%;
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -43,6 +68,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 2.5rem;
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 1.7rem;
+  }
 }
 
 .benefits__list{
@@ -54,22 +84,39 @@
     background-repeat: no-repeat;
     background-position: 100% 0%;
     width: 100%;
+    @include media-tablet {
+      background-size: 35% 45%;
+      background-position: 100% -2rem;
+    }
     &:nth-child(3) {
       .benefits__list__title {
         margin-right: 0;
       }
+    }
+    @include media-tablet {
+      padding: 1.5rem;
+      border-radius: 1rem;
     }
   }
   &__icon {
     background: $color-benefits-item-icon-bg;
     border-radius: 1rem;
     padding: 1.7rem 1.7rem 1rem 1.7rem;
+    @include media-tablet {
+      padding: 0.6rem;
+    }
   }
   &__title {
     color: $color-benefits-title;
     @extend %font-add-Euclid-Circular-A;
     @include font(2.2rem, normal, 700);
     margin: 2.5rem 1.5rem 1.5rem 0;
+    @include media-tablet {
+      @include font(1.8rem, normal, 700);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 80%;
+    }
   }
   &__subtitle {
     color: $color-benefits-subtitle;
@@ -77,5 +124,11 @@
     @include font(1.6rem, 100%, 300);
     margin-bottom: 1rem;
     margin-right: 0rem;
+    @include media-tablet {
+      @include font(1.6rem, 133%, 300);
+      margin-top: 0rem;
+      margin-bottom: 0;
+      width: 85%;
+    }
   }
 }

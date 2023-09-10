@@ -1,6 +1,8 @@
 .button__wrapper {
   display: grid;
   grid-template-columns: min-content;
+  z-index: 20;
+  position: relative;
 }
 
 .button {
@@ -13,6 +15,14 @@
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  @include media-tablet {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  &:hover {
+    background-color: $color-btn-bg-hover;
+  }
 }
 
 .button-title {
@@ -24,4 +34,8 @@
   align-self: center;
   justify-self: start;
   margin-left: 1rem;
+  @include media-tablet {
+    @include font(1.5rem, 200%, 400);
+    margin-left: 1.5rem;
+  }
 }

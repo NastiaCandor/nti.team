@@ -12,6 +12,10 @@ $slider-padding-left: 20.3vw;
   padding-right: $slider-padding-right !important;
   padding-left: $slider-padding-left !important;
   height: 100%;
+  @include media-tablet {
+    padding: 0 !important;
+    height: 80rem;
+  }
 }
 
 .splide__slide {
@@ -41,6 +45,15 @@ $slider-padding-left: 20.3vw;
   &--prev {
     transform: scale(-1);
   }
+  @include media-tablet {
+    top: 56rem;
+    right: -2.3rem;
+    scale: 0.65;
+    &--prev {
+      transform: scale(-1);
+      top: 55rem;
+    }
+  }
 }
 
 .splide__slide {
@@ -59,5 +72,10 @@ $slider-padding-left: 20.3vw;
     &.is-active {
       background: $color-slider-pagination-active;
     }
+  }
+  @include media-tablet {
+    left: 5rem;
+    bottom: 11.5rem;
+    scale: 0.5;
   }
 }

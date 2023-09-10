@@ -8,6 +8,13 @@
   content: '';
 }
 
+.hamburger__wrapper {
+  display: none;
+  @include media-tablet {
+    display: block;
+  }
+}
+
 .hamburger {
   display: inline-block;
   display: none;

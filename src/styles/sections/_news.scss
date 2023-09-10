@@ -3,13 +3,22 @@
 }
 
 .news__wrapper {
-  padding: 17rem 0 17.8rem 0;
+  padding-top: 17rem;
+  padding-bottom: 17.8rem;
+  @include media-tablet {
+    padding-top: 10.9rem;
+    padding-bottom: 11.5rem;
+  }
 }
 
 .news__preview {
   display: flex;
   justify-content: space-between;
   margin-bottom: 6.5rem;
+  @include media-tablet {
+    flex-direction: column;
+    margin-bottom: 3.9rem;
+  }
 }
 
 .news__info {
@@ -18,11 +27,19 @@
     @include font(5rem, 100%, 400);
     color: $color-section-title;
     margin-bottom: 3rem;
+    @include media-tablet {
+      @include font(3rem, 100%, 400);
+      margin-bottom: 2.5rem;
+    }
   }
   &__subtitle {
     @include font(1.8rem, 150%, 300);
     color: $color-section-subtitle;
     width: 80%;
+    @include media-tablet {
+      @include font(1.5rem, 150%, 300);
+      width: 100%;
+    }
   }
 }
 
@@ -34,6 +51,14 @@
     margin: 1.5rem 2rem 0 0;
     align-self: auto;
   }
+  @include media-tablet {
+    flex-direction: row;
+    margin-top: 3.1rem;
+    .button-title {
+      margin: 1rem 0 0 1.5rem;
+      align-self: auto;
+    }
+  }
 }
 
 // CARDS
@@ -43,6 +68,16 @@
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   grid-row-gap: 4rem;
   grid-column-gap: 4.2rem;
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 2.5rem;
+    .news__cards__item {
+      &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        display: none;
+      }
+    }
+  }
 }
 
 .news__cards__item {
@@ -53,6 +88,10 @@
   flex-direction: column-reverse;
   border-radius: 4.5rem 0 4.5rem 0;
   filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.05));
+  @include media-tablet {
+    width: 32.6rem;
+    height: 29rem;
+  }
   &::after {
     content: '';
     display: block;
@@ -64,6 +103,10 @@
     width: 100%;
     top: 60%;
     z-index: 1;
+    @include media-tablet {
+      background-image: url('../assets/img/news_item_footer-white-addaptive.svg');
+      top: 52%;
+    }
   }
 }
 
@@ -72,12 +115,20 @@
     margin: 2.5rem 3rem;
     position: relative;
     z-index: 2;
+    @include media-tablet {
+      margin-left: 2rem;
+      margin-bottom: 1.8rem;
+    }
   }
   &__title {
     @include font(2.5rem, 130%, 700);
     color: $color-section-title;
     margin-bottom: 1rem;
     width: 60%;
+    @include media-tablet {
+      width: 90%;
+      margin-bottom: 0rem;
+    }
   }
   &__subtitle {
     @include font(1.4rem, 150%, 400);
@@ -96,6 +147,11 @@
   text-align: center;
   color: $color-news-item-date-text;
   box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.06);
+  @include media-tablet {
+    padding: 1.7rem 0.6rem;
+    top: 5.3rem;
+    right: -1.7rem;
+  }
   &-day {
     @include font(2rem, normal, 900);
     margin-bottom: 0.7rem;
@@ -116,4 +172,8 @@
   bottom: 7.1rem;
   right: 3rem;
   scale: 1.2;
+  @include media-tablet {
+    bottom: 8.2rem;
+    right: 2.5rem;
+  }
 }

@@ -45,7 +45,7 @@ const mainParams = {
     btnText: {
       tag: 'p',
       cssClasses: ['content__info-more-text', 'button-title'],
-      textContent: 'Побробнее',
+      textContent: 'Подробнее',
     },
     contentPhoto: {
       tag: 'div',
